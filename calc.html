@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: centre;
+            padding: 40px;
+        }
+
+        .calc-box {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 24px;
+            width: 300px;
+        }
+
+        h1 {
+            font-size: 22px;
+            margin: 0 0 16px;
+        }
+
+        .inputs input {
+            flex: 1;
+            padding: 8px;
+            font-size: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        .result-row {
+            background-color: pink;
+            border-radius: 6px;
+            padding: 10px 14px;
+            display: flex;
+            justify-content: space-beteen;
+            margin-bottom: 6px;
+        }
+
+        .op-label {
+            font-size: 13px;
+            color: #666
+        }
+
+        .op-value{
+            font-size: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="calc-box">
+    <h1>Calculator</h1>
+
+    <div class="inputs">
+        <input type="number" id="num1" value="10" oninput="calculate()" />
+        <input type="number" id="num2" value="2" oninput="calculate()" />
+    </div>
+
+    <div class="result-row">
+        <span class="op-label">Addition </span>
+        <span class="op-value" id="add"></span>
+    </div>
+    <div class="result-row">
+        <span class="op-label">Subtraction </span>
+        <span class="op-value" id="sub"></span>
+    </div>
+    <div class="result-row">
+        <span class="op-label">Multiplication </span>
+        <span class="op-value" id="mul"></span>
+    </div>
+    <div class="result-row">
+        <span class="op-label">Division</span>
+        <span class="op-value" id="div"></span>
+    </div>
+    </div>
+
+
+    <p id="add"></p>
+    <p id="sub"></p>
+    <p id="mul"></p>
+    <p id="div"></p>
+
+    <script>
+        var num1 = 10;
+        var num2 = 2;
+
+        var add = num1 + num2;
+        var sub = num1 - num2;
+        var mul = num1 * num2;
+        var div = num1 / num2;
+
+        document.getElementById("add").innerHTML = ": " + add;
+        document.getElementById("sub").innerHTML = ": " + sub;
+        document.getElementById("mul").innerHTML = ": " + mul;
+        document.getElementById("div").innerHTML = ": " + div;
+    </script>
+
+
+</body>
+</body>
+</html>
